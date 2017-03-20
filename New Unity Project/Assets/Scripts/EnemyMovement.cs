@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
-	public float speed;
+	private float speed;
 
 	void Update() {
+		speed = Random.Range (1.0f, 10.0f);
 		transform.Translate(Vector3.back * Time.deltaTime * speed);
 	}
 }
