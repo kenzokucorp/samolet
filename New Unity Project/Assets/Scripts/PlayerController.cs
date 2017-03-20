@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
 	public string verticalAxis = "Vertical";
 	public string jumpButton = "Jump";
 
-	public BoxCollider feetCollider = null;
+	public CapsuleCollider feetCollider = null;
 	public LayerMask groundLayer;
 
 	private Rigidbody theRigidbody = null;
@@ -72,9 +72,10 @@ public class PlayerController : MonoBehaviour {
 
 	private bool GetGrounded() {
 		//VECTOR 3 sumar offset
-		Vector3 boxCenter = feetCollider.center;
-		Collider2D[] hitColliders = Physics2D.OverlapBoxAll (boxCenter, feetCollider.size, groundLayer);
-		return hitColliders.Length > 0;
+		//Vector3 boxCenter = feetCollider.center;
+		//Collider2D[] hitColliders = Physics2D.OverlapBoxAll (boxCenter, feetCollider.height, groundLayer);
+		//return hitColliders.Length > 0;
+		return false;
 	}
 
 	private void ChangeDirection() {
@@ -92,7 +93,7 @@ public class PlayerController : MonoBehaviour {
 
 		float horizontal = CrossPlatformInputManager.GetAxis (horizontalAxis);
 		theRigidbody.AddForce (Vector2.right * horizontal * maxSpeed);
-
+		theTransform.Rotate (new Vector3 (0.0f, 0.0f, -horizontal * (maxSpeed/10)));
 		if ((horizontal < 0) || (horizontal > 0)) {
 			ChangeDirection ();
 		}
