@@ -85,6 +85,7 @@
 'Assets/Scripts/ControlLimits.cs'
 'Assets/Scripts/EffectSpawner.cs'
 'Assets/Scripts/EnemyMovement.cs'
+'Assets/Scripts/GameOverScreen.cs'
 'Assets/Scripts/Health.cs'
 'Assets/Scripts/PlayerController.cs'
 'Assets/Scripts/PointsHandler.cs'

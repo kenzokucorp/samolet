@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour {
 
 	public GameObject deathParticlesPrefab = null;
+	public GameOverScreen gameOverScreen = null;
 	private Transform theTransform = null;
 	public bool shouldBeDestroyOnDeath = true;
 	public bool shouldShowGameOverOnDeath = false;
@@ -23,6 +24,7 @@ public class Health : MonoBehaviour {
 				if (deathParticlesPrefab != null) {
 					Instantiate (deathParticlesPrefab, theTransform);
 					if(shouldBeDestroyOnDeath) {
+						gameOverScreen.ShowGameOver ();
 						Destroy (gameObject);
 					}
 				}
