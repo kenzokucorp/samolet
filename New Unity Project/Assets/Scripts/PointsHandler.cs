@@ -29,7 +29,7 @@ public class PointsHandler : MonoBehaviour {
 		if (health != null) {
 			string pointsToDisplay = "";
 			currentMillisecond = System.DateTime.Now.Millisecond;
-			int deltaPoints = currentMillisecond - millisecondStarted;
+			int deltaPoints = Mathf.Abs(currentMillisecond - millisecondStarted) / 10;
 			currentPoints += deltaPoints;
 			pointsToDisplay += currentPoints;
 			pointsScored.text = pointsToDisplay;
