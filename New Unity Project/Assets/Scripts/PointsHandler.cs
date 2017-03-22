@@ -34,8 +34,12 @@ public class PointsHandler : MonoBehaviour {
 			pointsToDisplay += currentPoints;
 			pointsScored.text = pointsToDisplay;
 		} else {
-			if (finalPoints != null) {
+			if (finalPoints != null && finalPoints != currentPoints) {
 				finalPoints = currentPoints;
+				int lastScore = PlayerPrefs.GetInt ("user_score");
+				if (finalPoints > lastScore) {
+					PlayerPrefs.SetInt ("user_score", finalPoints);
+				}
 			}
 		}
 	}
