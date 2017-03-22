@@ -26,7 +26,7 @@ public class Spawner : MonoBehaviour {
 		yield return new WaitForSeconds (startWait);
 
 		while (!stop) {
-			randomEnemy = Random.Range (0,2);
+			randomEnemy = Random.Range (0,enemies.Length);
 			Vector3 spawnPosition = new Vector3 (Random.Range(-spawnValues.x, spawnValues.x), 1, 
 				Random.Range(-spawnValues.z, spawnValues.z));
 
