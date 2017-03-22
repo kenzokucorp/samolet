@@ -14,6 +14,7 @@ public class PointsHandler : MonoBehaviour {
 
 	void Awake() {
 		pointsScored = GetComponent<Text> ();
+		pointsScored.gameObject.SetActive (true);
 	}
 
 	// Use this for initialization
@@ -40,6 +41,8 @@ public class PointsHandler : MonoBehaviour {
 				if (finalPoints > lastScore) {
 					PlayerPrefs.SetInt ("user_score", finalPoints);
 				}
+				PlayerPrefs.SetInt ("last_score", finalPoints);
+				pointsScored.gameObject.SetActive (false);
 			}
 		}
 	}
