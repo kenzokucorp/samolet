@@ -11,10 +11,12 @@ public class PointsHandler : MonoBehaviour {
 	private int currentMillisecond;
 	private int currentPoints;
 	private int finalPoints;
+	private GameObject pointsGUI;
 
 	void Awake() {
 		pointsScored = GetComponent<Text> ();
-		pointsScored.gameObject.SetActive (true);
+		pointsGUI = GameObject.FindGameObjectWithTag ("Points GUI");
+		pointsGUI.SetActive (true);
 	}
 
 	// Use this for initialization
@@ -42,7 +44,7 @@ public class PointsHandler : MonoBehaviour {
 					PlayerPrefs.SetInt ("user_score", finalPoints);
 				}
 				PlayerPrefs.SetInt ("last_score", finalPoints);
-				pointsScored.gameObject.SetActive (false);
+				pointsGUI.SetActive (false);
 			}
 		}
 	}

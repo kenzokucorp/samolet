@@ -13,4 +13,8 @@ public class ButtonNextLevel : MonoBehaviour {
 	{
 		Application.LoadLevel(levelName);
 	}
+
+	public void QuitGame() {
+		Application.Quit();
+	}
 }

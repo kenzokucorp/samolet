@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour {
 		speed = Random.Range (1.0f, 10.0f);
 		transform.Translate(Vector3.back * Time.deltaTime * speed);
 
-		if (transform.position.z < 0.0f) {
+		if (transform.position.z < -2.0f) {
 			Destroy (gameObject);
 		}
 	}
