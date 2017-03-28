@@ -6,7 +6,7 @@ public class WindRandomizer : MonoBehaviour {
 
 	private Rigidbody theRigidbody = null;
 	private Transform theTransform = null;
-	private float maxSpeed = 5.0f;
+	private float maxSpeed = 7.5f;
 	private int maxRandomTime = 3;
 
 	void Awake () {
