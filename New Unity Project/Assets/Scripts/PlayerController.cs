@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float jumpPower = 400.0f;
 	public float jumpTimeout = 1.0f;
-	public float maxSpeed = 40.0f;
+	public float maxSpeed = 20.0f;
 
 	public string horizontalAxis = "Horizontal";
 	public string verticalAxis = "Vertical";
