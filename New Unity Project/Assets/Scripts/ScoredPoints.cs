@@ -11,7 +11,7 @@ public class ScoredPoints : MonoBehaviour {
 		scored = GetComponent<Text> ();
 	}
 
-	void Start() {
+	void Update() {
 		int lastScore = PlayerPrefs.GetInt ("last_score");
 		string userFeedback = "You scored " + lastScore + " points";
 		scored.text = userFeedback;

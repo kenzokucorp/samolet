@@ -28,7 +28,7 @@ public class PointsHandler : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (health != null) {
 			string pointsToDisplay = "";
 			currentMillisecond = System.DateTime.Now.Millisecond;
